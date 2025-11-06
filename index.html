@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Recommender — Light Glass</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <div class="brand">
+        <h1>Movie Recommender</h1>
+        <p class="tag">Discover • Like • Watch</p>
+      </div>
+
+      <div class="controls">
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Search movies, e.g. Inception" />
+          <button id="searchBtn" class="btn">Search</button>
+        </div>
+        <div class="actions">
+          <button id="clearLikes" class="btn danger">Clear Likes</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Banner -->
+      <section id="hero" class="hero glass">
+        <div class="hero-content">
+          <div class="hero-info">
+            <h2 id="heroTitle">Featured</h2>
+            <p id="heroPlot">A curated selection to get you started — like movies to get personalized recommendations.</p>
+            <div class="hero-actions">
+              <button id="heroWatch" class="btn primary">Watch Trailer</button>
+              <button id="heroLike" class="btn">Like</button>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img id="heroPoster" src="" alt="Featured poster" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Sections -->
+      <section>
+        <h3>Search Results</h3>
+        <div id="movies" class="movie-grid"></div>
+      </section>
+
+      <section>
+        <h3>Recommended For You</h3>
+        <div id="recommended" class="movie-grid"></div>
+      </section>
+
+      <section>
+        <h3>Liked Movies</h3>
+        <div id="likedMovies" class="movie-grid"></div>
+      </section>
+    </main>
+
+    <!-- Movie Detail Modal -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card glass">
+        <button class="modal-close" data-close="true">✕</button>
+        <div class="modal-body">
+          <img id="modalPoster" src="" alt="Poster" />
+          <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalMeta"></p>
+            <p id="modalPlot"></p>
+            <div class="modal-actions">
+              <button id="modalTrailer" class="btn primary">Watch Trailer</button>
+              <button id="modalLike" class="btn">Like</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <small>Light Glass theme • Improved UI & functionality</small>
+    </footer>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
